@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import headerImg from './images/bg-header-desktop.svg'
 import Jobs from './Jobs'
-import data from '../data.json'
+import data from './data.json'
 
 function App() {
 
