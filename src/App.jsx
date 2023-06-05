@@ -6,7 +6,7 @@ import data from './data.json'
 function App() {
 
   if (data) {
-    console.log(data)
+    
     data.map(item => {
       if (item.hasOwnProperty('new')) {
         item['isNew'] = item['new']
