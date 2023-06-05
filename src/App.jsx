@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import headerImg from './images/bg-header-desktop.svg'
+import headerImg from './bg-header-desktop.svg'
 import Jobs from './Jobs'
 import data from './data.json'
 
 function App() {
 
   if (data) {
+    console.log(data)
     data.map(item => {
       if (item.hasOwnProperty('new')) {
         item['isNew'] = item['new']
