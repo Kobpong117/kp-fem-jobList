@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  font-family: 'League Spartan', sans-serif;
+  font-size: 15px;
+  transition: all 0.4s linear;
+}
+
+main {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main .page-header {
+  background-color: hsl(180, 29%, 50%); 
+}
+
+.page-header img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.job-display {
+  background-color: hsl(180, 52%, 96%);
+  min-height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.filter-section {
+  width: 80%;
+  max-width: 850px;
+  padding: 1rem;
+  background-color: #fff;
+  position: absolute;
+  top: -2rem;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tag-display {
+  display: flex;
+}
+
+.job-card {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 850px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 5px 8px 5px hsl(180, 31%, 95%);
+}
+
+.job-card:hover {
+  box-shadow: 5px 8px 5px hsl(180, 21%, 80%);;
+}
+
+.job-card:has(#featured) {
+  border-left: 0.3rem solid hsl(180, 29%, 50%);;
+}
+
+.job-info {
+  display: flex;
+  /* align-items: stretch; */
+  gap: 1.5rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#company {
+  color:  hsl(180, 29%, 50%);
+}
+
+#new {
+  text-transform: uppercase;
+  color: #fff;
+  background-color: hsl(180, 29%, 50%);
+  border-radius: 2rem;
+  padding: 0.4rem 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 12px;
+}
+
+#featured {
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #000;
+  border-radius: 2rem;
+  padding: 0.4rem 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 12px;
+}
+
+#position {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+#position:hover {
+  color:  hsl(180, 29%, 50%);
+}
+
+.more-info {
+  display: flex;
+  gap: 0.5rem;
+  color: gray;
+}
+
+.job-tags {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#tag {
+  border: none;
+  font-weight: 700;
+  padding: 0.4rem 0.5rem;
+  color:  hsl(180, 29%, 50%);
+  background-color: hsl(180, 52%, 96%);
+}
+
+#tag:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: hsl(180, 29%, 50%);
+}
+
+#clear {
+  color:  hsl(180, 8%, 52%);
+  font-weight: 700;
+  margin-left: auto;
+}
+
+#clear:hover {
+  color: hsl(180, 29%, 50%);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#tag-element {  
+  margin-right: 0.4rem;
+  border: none;
+  
+}
+
+#tag-btn {
+  padding: 0.5rem 0.5rem;
+  color:  hsl(180, 29%, 50%);
+  background-color: hsl(180, 52%, 96%);
+  border: none;
+  padding-right: 0.4rem;
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem; 
+  
+}
+
+#tag-close {
+  padding: 0.5rem 0.5rem;
+  color: #fff;
+  background-color: hsl(180, 29%, 50%);
+  border: none;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem; 
+}
+
+#tag-close:hover {
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 675px) {
+
+  .job-display {
+    padding-top: 6rem;
+  }
+
+  .job-card {
+    position: relative;
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    margin-top: 1.5rem;
+  }
+
+  .company-logo {
+    position: absolute;
+    top: -2rem;
+
+  }
+
+  .company-logo img {
+    width: 60px;
+  }
+
+  .info {
+    gap: 1.2rem;
+  }
+
+  .job-tags {
+    justify-content: start;
+    padding-top: 1.2rem;
+    border-top: 1px solid hsl(180, 8%, 52%);
+  }
+
+  .tag-display {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+}
