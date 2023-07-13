@@ -1,6 +1,7 @@
 const SingleJob = (props) => {
     const {company, contract, featured, isNew, languages, level, location, logo, position, postedAt, role, tools, filterByTag} = props
     const tags = new Set([level, role, ...languages, ...tools])
+    // Get all tags for this particular job
     const uniqueTag = [...tags]
     
   return (
